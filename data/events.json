@@ -1,0 +1,244 @@
+[
+    {
+        "date": "2016-12-01",
+        "title": "DevTernity",        
+        "place": "Riga, Latvia",
+        "url": "http://devternity.com/",
+        "cover": "/img/events/1.jpg",
+        "workshop": true
+    },
+    {
+        "date": "2016-05-26",
+        "title": "DevOps Pro",
+        "place": "Vilnius, Lithuania",
+        "url": "http://devopspro.lt/"
+    },
+    {
+        "date": "2016-05-19",
+        "title": "IT.A.K.E Unconference 2016",
+        "place": "Bucharest, Romania",
+        "url": "http://itakeunconf.com/"
+    },
+    {
+        "date": "2016-05-09",
+        "title": "Baltic DevOps",
+        "place": "Tallinn, Estonia",
+        "url": "http://topconf.com/baltic-devops-2016/"
+    },
+    {
+        "date": "2016-04-26",
+        "title": "CraftConf",
+        "place": "Budapest, Hungary",
+        "url": "http://www.craft-conf.com/2016"
+    },
+    {
+        "date": "2016-04-08",
+        "title": "Greach 2016",
+        "place": "Madrid, Spain",
+        "url": "https://docs.google.com/forms/d/1UEu5B7yJb52tcEhy7XVv38DtocfwEjvFd6BmxrnAZak/viewform?embedded=true&usp=form_confirm&edit2=2_ABaOnufl44kpSv2wrMEtCv4Ja-hzNDNRDmc-wsqI6SiyWVo0hNuE2X6eOvqHZNA"
+    },
+    {
+        "date": "2016-03-19",
+        "title": "GR8Day Warsaw",
+        "place": "Warsaw, Ploand",
+        "url": "http://warsaw.gr8days.pl/#/"
+    },
+    {
+        "date": "2016-03-08",
+        "title": "JavaLand",
+        "place": "Bruhl, Germany",
+        "url": "https://www.javaland.eu/en/javaland-2016/"
+    },
+    {
+        "date": "2016-03-02",
+        "title": "RigaDevDay",
+        "place": "Riga, Latvia",
+        "url": "https://docs.google.com/forms/d/1N3drIQe20-UB0p1YQGlTo1dMTdKp1NPfJlBoGefkcNY/viewform?edit2=2_ABaOnufig4jvgnVF4-A1KyEne69STQFxy4UW9a2SlarF5_dkYECGC_AEz9NPPfw"
+    },
+    {
+        "date": "2015-12-14",
+        "title": "Groovy & Grails eXchange",
+        "place": "London, UK",
+        "url": "http://codemotionworld.com/"
+    },
+    {
+        "date": "2015-11-04",
+        "title": "Codemotion",
+        "place": "Berlin, Germany",
+        "url": "http://codemotionworld.com/"
+    },
+    {
+        "date": "2015-11-02",
+        "title": "Clean Code Days",
+        "place": "Munich, Germany",
+        "url": "http://www.cleancode-days.de/"
+    },
+    {
+        "date": "2015-10-12",
+        "title": "JDD",
+        "place": "Krakow, Poland",
+        "url": "http://jdd.org.pl/"
+    },
+    {
+        "date": "2015-10-08",
+        "title": "javagruppen.dk",
+        "place": "Copenhagen, Denmark",
+        "url": "https://www.eventbrite.com/e/javagruppen-ga-hjem-mde-tickets-18880683633"
+    },
+    {
+        "date": "2015-10-06",
+        "title": "Latcraft | Java",
+        "place": "Riga, Latvia",
+        "url": "http://latcraft.lv/"
+    },
+    {
+        "date": "2015-09-26",
+        "title": "ByCraft",
+        "place": "Minsk, Belarus",
+        "url": "http://bycraft.by/"
+    },
+    {
+        "date": "2015-09-24",
+        "title": "Vilnius JUG",
+        "place": "Vilnius, Lithuania",
+        "url": "http://lanyrd.com/2015/vilnius-jugvilnius-gdg-meeting-44/"
+    },
+    {
+        "date": "2015-09-11",
+        "title": "Greach",
+        "place": "Madrid, Spain",
+        "url": "http://greachconf.com/"
+    },
+    {
+        "date": "2015-07-31",
+        "title": "GR8Conf US",
+        "place": "Minneapolis, US",
+        "url": "http://gr8conf.us"
+    },
+    {
+        "date": "2015-06-09",
+        "title": "Latcraft | Ops",
+        "place": "Riga, Latvia",
+        "url": "http://latcraft.lv"
+    },
+    {
+        "date": "2015-06-04",
+        "title": "JFokus",
+        "place": "Stockholm, Sweden",
+        "url": "http://www.jfokus.se/jfokus/"
+    },
+    {
+        "date": "2015-06-04",
+        "title": "GR8Conf EU",
+        "place": "Copenhagen, Denmark",
+        "url": "http://gr8conf.eu/#/"
+    },
+    {
+        "date": "2015-05-21",
+        "title": "DevClub | DevOps",
+        "place": "Riga, Latvia",
+        "url": "http://devclub.lv"
+    },
+    {
+        "date": "2015-04-20",
+        "title": "JAX",
+        "place": "Mainz, Germany",
+        "url": "http://jax.de/"
+    },
+    {
+        "date": "2015-03-24",
+        "title": "Javaland",
+        "place": "Br\u00fchl, Germany",
+        "url": "http://gr8conf.eu/#/"
+    },
+    {
+        "date": "2015-03-23",
+        "title": "DevWeek",
+        "place": "London, UK",
+        "url": "http://devweek.com/"
+    },
+    {
+        "date": "2015-01-22",
+        "title": "RigaDevDay",
+        "place": "Riga, Latvia",
+        "url": "http://rigadevday.lv/"
+    },
+    {
+        "date": "2014-12-26",
+        "title": "DevConFu",
+        "place": "Jurmala, Latvia",
+        "url": "http://lanyrd.com/2014/devconfu/"
+    },
+    {
+        "date": "2014-11-28",
+        "title": "CodeMotion Milan",
+        "place": "Milan, Italy",
+        "url": "http://lanyrd.com/2014/codemotionit/"
+    },
+    {
+        "date": "2014-11-12",
+        "title": "DevConFu",
+        "place": "Jurmala, Latvia",
+        "url": "http://lanyrd.com/2014/devconfu-riga-november/"
+    },
+    {
+        "date": "2014-10-17",
+        "title": "OpenSlava",
+        "place": "Bratislava, Slovakia",
+        "url": "http://www.openslava.sk/2014/"
+    },
+    {
+        "date": "2014-06-12",
+        "title": "Devoxx UK",
+        "place": "London, UK",
+        "url": "http://www.devoxx.co.uk/"
+    },
+    {
+        "date": "2014-04-04",
+        "title": "DevOpsDays Ljubljana",
+        "place": "Ljubljana, Slovenia",
+        "url": "http://www.devopsdays.org/events/2014-ljubljana/"
+    },
+    {
+        "date": "2013-11-28",
+        "title": "Java Day",
+        "place": "Riga, Latvia",
+        "url": "http://javaday.lv/"
+    },
+    {
+        "date": "2013-11-13",
+        "title": "DevConFu",
+        "place": "Jurmala, Latvia",
+        "url": "http://lanyrd.com/2013/devconfu/"
+    },
+    {
+        "date": "2013-10-17",
+        "title": "16th DevClub",
+        "place": "Riga, Latvia",
+        "url": "http://www.eventbrite.com/e/16th-devclublv-tickets-8606635679"
+    },
+    {
+        "date": "2013-02-21",
+        "title": "jug.lv",
+        "place": "Riga, Latvia",
+        "url": "http://jug.lv/post/19901341207/speakers"
+    },
+    {
+        "date": "2012-11-29",
+        "title": "JavaDay Riga",
+        "place": "Riga, Latvia",
+        "url": "http://2012.javaday.lv/"
+    },
+    {
+        "date": "2012-05-24",
+        "title": "jug.lv",
+        "place": "Riga, Latvia",
+        "url": "http://jug.lv/post/19901341207/speakers"
+    },
+    {
+        "date": "2011-10-20",
+        "title": "jug.lv",
+        "place": "Riga, Latvia",
+        "url": "http://jug.lv/post/19901341207/speakers"
+    }
+]

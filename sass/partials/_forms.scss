@@ -1,0 +1,236 @@
+.tform {
+	width: 100%;
+	position: relative;
+
+	.form-group {
+		margin: 16px 0 12px 0;
+		padding: 0;
+		position: relative;
+		width: 100%;
+		float: left;
+		display: block;
+		@include pie-clearfix;
+		
+		input, textarea, select {
+			border: 1px solid #d0cebc;
+			display: block;
+   			position: relative;
+   			width: 100%;
+			padding: 8px 6px;
+			height: 40px;
+			line-height: normal;
+			vertical-align: middle;
+			margin: 0;
+			font-family: "Arial";
+			font-size: 14px;
+			outline: 0;
+			color: #333;
+			@include single-transition(border-color, 0.2s, linear, false);
+
+			&:focus {
+				border: 2px solid $lred;	
+				padding: 7px 5px;
+			}
+		}
+
+		textarea {
+			resize: vertical;
+			height: 120px;
+		}
+		label {
+			font-size: 11px;
+			text-transform: uppercase;
+			font-weight: bold;
+			position: absolute;
+			top: -17px;
+			z-index: 10;
+			left: 0;
+			float: left;
+			color: #aaa;
+			@include single-transition(all, 0.1s, linear, false);
+			opacity: 1;
+			display: block;
+			
+			&.active {
+				color: #6f478f;
+			}
+		}
+		&.half {
+			@include span-columns(6);
+		}
+		&.half-last {
+			@include span-columns(6 omega);
+		}
+		.input-group {
+			display: block;
+    		overflow: hidden;
+		}
+		.push-note {
+			.pushtip {
+				width: 22px;
+				height: 22px;
+				background: #631686;
+				color: #fff;
+				@include border-radius(50%);
+				margin: 9px 8px;
+				display: table-cell;
+				float: right;
+			}
+
+			i {
+				text-align: center;
+				font-size: 14px;
+				display: block;
+				width: 100%;
+				height: 100%;
+				vertical-align: center;
+				line-height: 22px;	
+			}
+		}
+		.tooltip {
+			width: 22px;
+			height: 22px;
+			background: #631686;
+			color: #fff;
+			@include border-radius(50%);
+			margin: 9px 8px;
+			position: relative;
+			display: table-cell;
+			float: right;
+
+			i {
+				text-align: center;
+				font-size: 14px;
+				display: block;
+				width: 100%;
+				height: 100%;
+				vertical-align: center;
+				line-height: 22px;	
+			}
+
+			&:hover span  {
+	    		opacity: 1;
+	    		left: 40px;
+	    		@include transition(opacity 0.2s linear false, left 0.2s linear false); 
+	    		z-index: 100;
+			}
+			span {
+				z-index: -100;
+				opacity: 0;
+				padding: 5px 15px;
+				position: absolute;
+				top: -20px;
+				left: 30px;
+				width: 220px;
+				background: #333;
+				background: rgba(0,0,0,.8);
+				color: #fff;
+
+				&:hover {
+					opacity: 0;
+					z-index: -100;
+				}
+
+				&:before {
+		    		border: solid;
+		    		border-color: transparent #333 ;
+		    		border-width: 10px 10px 10px 0;
+		    		content: "";
+		    		position: absolute;
+		    		z-index: 99;
+		    		left: -10px;
+		    		top: 20px;
+				}
+			}
+		}
+	}
+
+	.seperator {
+		width: 100%;
+		height: 1px;
+		background: #f3f3f3;
+		margin: 20px 0;
+		float: left;
+
+		display: block;
+		@include clearfix;
+	}
+
+	.dynamic label {
+		opacity: 0;
+		top: -12px;
+
+		&.show {
+			top:-17px;
+  			opacity:1;
+		}
+	}
+	.required .input-group {
+		overflow: visable;
+	}
+	.required .input-group:before {
+		width: 16px;
+		background: #dedede;
+		display: table-cell;
+		border: 1px solid #d0cebc;
+		border-right: none;
+		height: 100%;
+		text-align: center;
+		padding: 4px 0 0 0;
+		z-index: 200;
+		color: #000;
+		content: "\f069";
+		position: relative;
+		font-family: FontAwesome;
+		font-size: 10px;
+		font-weight: normal;
+		float: left;
+	}
+
+	.stable {
+		margin: 0 0 12px;
+		input {
+			width: auto;
+			clear: none;
+			height: 30px;	
+			margin: 0 10px 0 0;
+			float: left;
+		}
+		label {
+			width: auto;
+			font-size: 14px;
+			line-height: 30px;
+			top: 0;
+			margin: 0 10px 0 0;
+			clear: none;
+			position: relative;
+			text-transform: none;
+			color: #333;
+			font-weight: normal;
+		}
+		.tooltip {
+			float: left;
+			margin: 5px 0 3px 0;
+		}
+	}
+
+	.submit-button {
+		height: 60px;
+		padding: 0 20px;
+		line-height: 40px;
+		background: $red;
+		margin-top: 20px;
+		width: 100%;
+		font-size: 14px;
+		border: none;
+		clear: both;
+		float: left;
+		color: #fff;
+		cursor: pointer;
+		@include single-transition(all, 0.1s, linear, false); 
+
+		&:hover {
+			background: lighten($lred, 10%);
+		}
+	}
+}

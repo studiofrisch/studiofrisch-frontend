@@ -1,0 +1,347 @@
+// --------------------------------------------
+// about
+section#about {
+	padding: 60px 0;
+
+	.block-title {
+		float: left;
+		text-align: left;
+	}
+
+	.description {
+		width: 100%;
+		clear: both;
+
+		p {
+			color: $base-header;
+			font-size: 18px;
+			font-weight: 300;
+			margin-bottom: 0;	
+			line-height: 1.54;	
+		}
+	}
+
+
+	// ---------------------- phone meiaq
+	@include media($phone) {
+	}
+	// ---------------------- tablet meiaq
+	@include media($tablet) {
+		.description {
+			margin: 0 0 0 50%;
+			padding-top: 42px;
+			width: 50%;
+			clear: none;
+			color: $base-header;
+		}
+	}
+	// ---------------------- desktop meiaq
+	@include media($desktop) {
+		padding: 75px 0 110px;
+	}
+}
+
+
+// --------------------------------------------
+// process
+section#process {
+	padding: 60px 0;
+
+	.step {	
+		width: 100%;
+		margin-bottom: 60px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+
+		h3 {
+			margin-bottom: 24px;
+			font-size: 18px;
+			font-weight: 400;
+			font-family: $secondary-font;
+			//- color: #dc9090;
+		}
+
+		span {
+			color: $secondary;
+			margin: 0 0 24px 0;
+			display: block;
+			float: left;
+			width: 100%;
+			letter-spacing: 3px;
+			font-weight: 700;
+			font-size: 13px;
+		}
+
+		p {
+			font-weight: 300;
+			color: $base-header;
+			margin-bottom: 24px;
+			line-height: 28px;
+			float: left;
+			width: 100%;			
+		}
+
+		ul {
+			margin: 0;
+
+			li {
+				line-height: 36px;
+				font-size: 18px;
+				font-weight: 300;
+				color: $base-header;
+			}
+		}
+	}
+
+	// ---------------------- phone meiaq
+	@include media($phone) {
+		
+	}
+	// ---------------------- tablet meiaq
+	@include media($tablet) {
+		.step {
+			width: 33.333333%;
+			padding-right: 80px;
+			float: left;
+
+			h3 {
+				margin-bottom: 40px;
+			}
+
+			span {
+				margin-bottom: 40px;
+			}
+		}
+	}
+	// ---------------------- desktop meiaq
+	@include media($desktop) {
+		padding: 110px 0 80px 0;
+
+		.step {
+			p {
+				min-height: 224px;
+				margin-bottom: 42px;
+			}
+		}
+	}
+}
+
+
+// --------------------------------------------
+// clients
+section#clients {
+	padding: 60px 0;
+
+	.wrap {
+		background: #e8ebed;
+		width: auto;
+		margin: 0 -10px;
+		padding: 80px 10px 60px 10px;
+		overflow: hidden;
+	}
+
+	.block-title {
+		float: left;
+		max-width: 160px;
+		width: 100%;
+
+		h2 {
+			color: #fff;
+		}
+	}
+
+	.clients {		
+		overflow: hidden;
+		width: 100%;
+
+		.client {
+			@include span-columns(2 of 4);
+			display: block;
+			padding:  30px 20px;		
+			height: 140px;	
+			margin-bottom: 40px;
+
+			&:nth-child(2n) {
+				@include omega();
+			}
+
+			svg {
+				width: 100%;
+				margin: 0 auto;
+				height: 100%;
+				max-height: 80px;
+				max-width: 120px;
+				vertical-align: middle;
+				display: block;
+			}
+
+			&:nth-child(1), &:nth-child(6) { // lattelecom and nordea
+				padding: 30px 10px;
+
+				svg {
+					max-width: 136px;
+				}
+			}
+
+			&:nth-child(2) svg { // rimi
+				max-width: 108px;
+			}		
+
+			&:nth-child(3) svg { // dove
+				max-height: 65px;
+			}	
+
+			&:nth-child(4) svg { // balzams
+				max-height: 64px;
+			}	
+		}
+	}
+
+	// ---------------------- phone meiaq
+	@include media($phone) {
+		.clients {		
+			.client {
+				@include span-columns(1 of 3);
+
+				&:nth-child(2n) {
+					@include span-columns(1 of 3);
+				}	
+
+				&:nth-child(3n) {
+					@include omega();
+				}		
+			}	
+		}
+	}
+	// ---------------------- tablet meiaq
+	@include media($tablet) {
+		.clients {
+			margin: 0 0 0 240px;
+			width: auto;	
+		}
+		
+	}
+	// ---------------------- desktop meiaq
+	@include media($desktop) {
+		padding: 80px 0;
+
+		.wrap {
+			margin: 0 -80px;
+			padding: 88px 80px 68px 80px;
+		}
+		.clients {
+			margin: 0 0 0 240px;
+			width: auto;
+
+			.client {
+				@include span-columns(1 of 4);
+
+				&:nth-child(2n) {
+					@include span-columns(1 of 4);
+				}
+
+				&:nth-child(3n) {
+					@include span-columns(1 of 4);
+				}	
+
+				&:nth-child(4n) {
+					@include omega();
+				}		
+			}	
+		}
+	}
+}
+
+
+// --------------------------------------------
+// contact
+section#contact {
+	padding: 70px 0 116px 0;
+
+	.container {
+		position: relative;
+	}
+
+	.block-title {
+		margin-bottom: 104px;
+	}
+	.logo {
+		width: 100%;
+		max-width: 80px;
+		margin: 108px 0;
+		display: block;
+		float: left;
+		clear: both;
+	}
+
+	.float {
+		width: 100%;
+	}
+
+	p {
+		margin: 0 0 30px 0;
+		font-weight: 300;
+	}
+
+	ul {
+		width: 100%;
+		float: left;
+
+		li {
+			margin: 0 0 60px 0;
+			font-weight: 300;
+			font-size: 18px;
+			width: 100%;
+			float: left;
+			line-height: 28px;
+
+			span {
+				float: left;
+				font-size: 11px;
+				color: $secondary;
+				font-weight: 700;
+				min-width: 33.333333%;
+				width: 100%;
+			}
+
+			a {
+				color: $base-header;
+			}
+		}
+	}
+
+
+	// ---------------------- phone meiaq
+	@include media($phone) {
+		ul {
+			li {
+				width: 50%;
+			}
+		}
+	}
+	// ---------------------- tablet meiaq
+	@include media($tablet) {		
+	}
+	// ---------------------- desktop meiaq
+	@include media($desktop) {
+		ul {
+			li {
+				width: 100%;
+
+				span {
+					width: auto;
+				}
+			}
+		}	
+		.logo {
+			margin-left: 50%;
+		}
+
+		.float {
+			width: 50%;
+			margin-left: 50%;
+		}
+	}
+}

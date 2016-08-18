@@ -1,0 +1,87 @@
+doctype html
+html
+	head
+		meta(charset="utf-8")
+		meta(name="viewport", content="width=device-width, initial-scale=1")
+
+		//- base
+		base(href="/")
+
+		//- share tags
+		meta(property='og:title', content='Frisch')
+		meta(property='og:type', content='website')
+		meta(property='og:image', content='')
+		meta(property='og:url', content='http://studiofrisch.com')
+		meta(property='og:description', content='Vizuālā identitāte, digitālais dizains un izstrāde. Veidojam unikālu dizainu, radām izcilus zīmolus un digitālos risinājumus, lepojoties ar padarīto.')
+		meta(property='og:site_name', content='Frisch')
+
+		//- twitter
+		meta(name='twitter:card', content='summary')
+		meta(name='twitter:title', content='Studio Frisch Design')
+		meta(name='twitter:description', content='Vizuālā identitāte, digitālais dizains un izstrāde. Veidojam unikālu dizainu, radām izcilus zīmolus un digitālos risinājumus, lepojoties ar padarīto.')
+		meta(name='twitter:image', content='')
+
+		//- pinterest
+		meta(name="p:domain_verify" content="1a3e18685a5d94d60f6f25b315e69809")
+
+		//- yes, this all is for a favicon
+		link(rel="apple-touch-icon", sizes="180x180", href="/img/favicon/apple-touch-icon.png")
+		link(rel="icon", type="image/png", href="/img/favicon/favicon-32x32.png", sizes="32x32")
+		link(rel="icon", type="image/png", href="/img/favicon/favicon-16x16.png", sizes="16x16")
+		link(rel="manifest", href="/img/favicon/manifest.json")
+		link(rel="mask-icon", href="/img/favicon/safari-pinned-tab.svg", color="#8facc5")
+		link(rel="shortcut icon", href="/img/favicon/favicon.ico")
+		meta(name="apple-mobile-web-app-title", content="Frisch")
+		meta(name="application-name", content="Frisch")
+		meta(name="msapplication-config", content="/img/favicon/browserconfig.xml")
+		meta(name="theme-color", content="#ffffff")
+
+		link(href="/css/style.css", rel="stylesheet")
+		
+		block head
+			title Studio Frisch Design — Brendinga un digitālā dizaina studija
+			meta(name="description", content="Vizuālā identitāte, digitālais dizains un izstrāde. Veidojam unikālu dizainu, radām izcilus zīmolus un digitālos risinājumus, lepojoties ar padarīto.")
+			meta(name="keywords", content="dizains, digitālais dizains, zīmola izpēte, logo, vizuālā identitāte, iepakojuma dizains, zīmju dizains, zīmola komunikācija, copywrite, wireframing, web dizains, digitālo produktu dizains, UX, sociālie tīkli, mājas lapas, front-end, back-end, mobilo lietotņu izstrāde, e-komercija, SEO, testēšana, uzturēšana, programmēšana")
+
+	body.preload
+		#grid
+			.container
+				div
+				div
+				div
+				div
+				div
+				div
+
+		#wrapper
+			block content
+			
+		script(type="application/ld+json").
+			{
+				"@context" : "http://schema.org",
+				"@type" : "Organization",
+				"name" : "Studio Frisch Design",
+				"url" : "http://studiofrisch.com",
+				"sameAs" : [
+					"https://www.facebook.com/studiofrisch"
+				]
+			}
+		script(src="/js/main.js")
+		script.
+			(function(d) {
+				var config = {
+					kitId: 'grq1yue',
+					scriptTimeout: 3000,
+					async: true
+				},
+				h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+			})(document);
+		script.
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+			ga('create', 'UA-80904812-1', 'auto');
+			ga('send', 'pageview');
+

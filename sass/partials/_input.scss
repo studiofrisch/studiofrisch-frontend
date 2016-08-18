@@ -1,0 +1,194 @@
+// --------------------------------------------
+// forms & inputs
+
+.input-group {
+	width: 100%;
+	margin: 0 0 20px 0;
+	float: left;
+
+	&.no-float {
+		float: none;
+	}
+
+	&.half-group {
+		@include span-columns(6 of 12);
+
+		&.last {
+			@include omega();
+		}
+	}
+
+	input, textarea, select {
+		width: 100%;
+		border: none;
+		border-radius: 3px;
+		padding: 12px 14px;
+		background: #fff;
+		float: left;
+		display: block;
+		font-size: 14px;
+		font-family: $primary-font;
+		font-weight: 400;
+		transition: border 0.4s, padding 0.4s;
+		-webkit-appearance: none;
+
+		&[disabled] {
+			background: #f0f0f0;
+		}
+
+		&.no-border {
+			border: 0;
+		}
+
+		&.small {
+			padding: 0px 30px;
+		}
+
+		&.margin-bottom {
+			margin-bottom: 12px;
+		}
+
+		&.error {
+			background: #f83434;
+		}
+	}
+
+	select {
+		padding: 12px 14px;
+		width: 100%;	
+		display: block;
+		float: left;
+		cursor: pointer;
+		background-image: url('/img/chevron-down.png') no-repeat right 12px center;
+		background-size: 10px 7px;
+	}
+
+	label, .label {
+		margin: 0 0 6px 0;
+		color: #707070;
+		float: left;
+		font-size: 12px;
+		line-height: 1.4;
+		width: 100%;
+		font-weight: 400;
+		text-transform: uppercase;
+
+		&.invalid {
+			font-size: 12px;
+	        color: #ff2f2f;
+	        margin: 3px 0 0 0;
+	        text-transform: none;
+	    }
+
+		&.auto {
+			width: auto;
+		}
+	}
+
+	textarea {
+		height: 126px;
+		resize: vertical;
+	}
+
+
+	// ---------------------- phone meiaq
+	@include media($phone) {
+		.half-input {
+			@include span-columns(4 of 8);
+		}
+	}
+}
+
+
+.check-group {	
+	label {
+		font-size: 14px;
+		font-weight: 400;
+	}
+	/* Base for label styling */
+	[type="checkbox"]:not(:checked),
+	[type="checkbox"]:checked {
+		position: absolute;
+		left: -9999px;
+	}
+	[type="checkbox"]:not(:checked) + label,
+	[type="checkbox"]:checked + label {
+		position: relative;
+		padding-left: 30px;
+		cursor: pointer;
+	}
+
+	/* checkbox aspect */
+	[type="checkbox"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before {
+		content: '';
+		position: absolute;
+		left: 0px;
+		top: -2px;
+		width: 20px; 
+		height: 20px;
+		border-radius: 3px;
+		font-family: "FontAwesome";
+		border: 1px solid #cccccc;
+		color: #fff;
+		font-size: 10px;
+		text-align: center;
+		line-height: 18px;
+	}
+
+	/* checked mark aspect changes */
+	[type="checkbox"]:checked + label:before {
+		background: $primary;
+		content: '\f00c';
+		border: 1px solid $primary;
+	}
+}
+
+
+.radio-group {	
+	float: left;
+	margin: 0 20px 20px 0;
+
+	label {
+		color: #0e0e0e;
+		font-size: 18px;
+	}
+
+	/* Base for label styling */
+	[type="radio"]:not(:checked),
+	[type="radio"]:checked {
+		position: absolute;
+		left: -9999px;
+	}
+	[type="radio"]:not(:checked) + label,
+	[type="radio"]:checked + label {
+		position: relative;
+		padding-left: 38px;
+		cursor: pointer;
+	}
+
+	/* radio aspect */
+	[type="radio"]:not(:checked) + label:before,
+	[type="radio"]:checked + label:before {
+		content: '';
+		position: absolute;
+		left:0px;
+		top: -4px;
+		width: 26px;
+		height: 26px;
+		border-radius: 13px;
+		border: 1px solid #cccccc;
+	}
+
+	/* checked mark aspect changes */
+	[type="radio"]:checked + label:after {
+		content: '';
+		position: absolute;
+		left: 6px;
+		top: 2px;
+		width: 14px;
+		height: 14px;
+		border-radius: 7px;
+		background: $primary;
+	}
+}

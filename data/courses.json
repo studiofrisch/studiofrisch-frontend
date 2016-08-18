@@ -1,0 +1,102 @@
+[
+  {
+    "name": "JVM internals and performance tuning",
+    "slug": "java-performance-tuning",
+    "type": "workshop",
+    "public": true,
+    "materials": true,
+    "duration": "2 days",
+    "icon": "fa-child",
+    "description": "Google Fit is a platform that allows developers to build applications that are focused on user fitness data.",
+    "parts": [
+      {
+        "name": "Introduction",
+        "duration": 112,
+        "description": "Do you love movies as much as you love making cool websites? Then, boy – have we got the lorem ipsum for you!",
+        "link": "course.html",
+        "lessons": []
+      },
+      {
+        "name": "Testing",
+        "duration": 46,
+        "description": "Do you love movies as much as you love making cool websites? Then, boy – have we got the lorem ipsum for you!",
+        "lessons": []
+      },
+      {
+        "name": "Process",
+        "duration": 97,
+        "description": "Do you love movies as much as you love making cool websites? Then, boy – have we got the lorem ipsum for you!",
+        "link": "course.html",
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "name": "DevOps MasterClass aka Extreme Automation",
+    "slug": "devops-masterclass",
+    "type": "workshop",
+    "public": true,
+    "materials": true,
+    "duration": "2 days",
+    "icon": "fa-bug",
+    "description": "Google Fit is a platform that allows developers to build applications that are focused on user fitness data.",
+    "url": {
+      "title": "Lynda.com",
+      "url": "#open-link"
+    },
+    "parts": [
+      {
+        "name": "Introduction",
+        "duration": 112,
+        "description": "Do you love movies as much as you love making cool websites? Then, boy – have we got the lorem ipsum for you!",
+        "link": "course.html",
+        "lessons": []
+      },
+      {
+        "name": "Testing",
+        "duration": 46,
+        "description": "Do you love movies as much as you love making cool websites? Then, boy – have we got the lorem ipsum for you!",
+        "lessons": []
+      },
+      {
+        "name": "Process",
+        "duration": 97,
+        "description": "Do you love movies as much as you love making cool websites? Then, boy – have we got the lorem ipsum for you!",
+        "link": "course.html",
+        "lessons": []
+      }
+    ]
+  },
+  {
+    "name": "Docker 101",
+    "slug": "introduction-to-docker",
+    "type": "workshop",
+    "public": true,
+    "materials": true,
+    "duration": "7 hours",
+    "icon": "fa-trophy",
+    "description": "Google Fit is a platform that allows developers to build applications that are focused on user fitness data.",
+    "parts": [
+      {
+        "name": "Introduction",
+        "duration": 112,
+        "description": "Do you love movies as much as you love making cool websites? Then, boy – have we got the lorem ipsum for you!",
+        "link": "course.html",
+        "lessons": []
+      },
+      {
+        "name": "Testing",
+        "duration": 46,
+        "description": "Do you love movies as much as you love making cool websites? Then, boy – have we got the lorem ipsum for you!",
+        "lessons": []
+      },
+      {
+        "name": "Process",
+        "duration": 97,
+        "description": "Do you love movies as much as you love making cool websites? Then, boy – have we got the lorem ipsum for you!",
+        "link": "course.html",
+        "lessons": []
+      }
+    ]
+  }
+]

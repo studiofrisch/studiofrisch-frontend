@@ -1,0 +1,115 @@
+// --------------------------------------------
+// helpers
+
+.block-title {
+	text-align: left;
+	margin: 0 0 40px 0;
+
+	h2 {
+		font-size: 32px;
+		color: $base-header;
+		margin: 0 0 6px 0;
+		line-height: 1.2;
+		font-weight: 400;
+		font-family: $secondary-font;
+	}
+
+	.tagline {
+		font-size: 11px;
+		margin: 0 0 18px 0;
+		font-weight: 700;
+		color: $secondary;
+		text-transform: uppercase;
+	}
+}
+
+// social buttons
+.social, .share {
+	margin: 0 auto;
+	width: 152px;
+
+	li {
+		float: left;
+		margin: 0 2px;
+	}
+
+	a {
+		width: 34px;
+		height: 34px;
+		line-height: 34px;
+		display: block;
+		text-align: center;
+		font-size: 22px;
+		border-radius: 30px;
+		text-align: center;		
+
+		i {
+			color: #f3f3f3;
+		}
+	}
+
+	&.color {
+		a.twitter i { color: #55acee; }
+		a.facebook i { color: #3b5998; }
+		a.pinterest i { color: #cb2027; }
+		a.linkedin i { color: #007bb5; }
+	}
+}
+
+// hide things
+.hidden {
+	display: none;
+}
+
+
+.block-reveal {	
+	.left-reveal, .right-reveal, .bottom-reveal, .fade-reveal {
+		overflow: hidden;
+		position: relative;
+
+		.wrap-reveal {
+			transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+			opacity: 0;
+			visibility: hidden;
+			transform: translate(0%, 0%) translateZ(0);
+			position: relative;
+			float: left;
+			display: block;
+			// background: #f3f3f3;
+		}
+
+		&:nth-child(2) .wrap-reveal { transition-delay: 0.1s; }
+		&:nth-child(3) .wrap-reveal { transition-delay: 0.2s; }
+		&:nth-child(4) .wrap-reveal { transition-delay: 0.3s; }
+		&:nth-child(5) .wrap-reveal { transition-delay: 0.4s; }
+		&:nth-child(6) .wrap-reveal { transition-delay: 0.5s; }
+		&:nth-child(7) .wrap-reveal { transition-delay: 0.6s; }
+		&:nth-child(8) .wrap-reveal { transition-delay: 0.7s; }
+	}
+
+	.left-reveal {
+		.wrap-reveal {
+			transform: translate(100%, 0%) translateZ(0);
+		}
+	}
+
+	.right-reveal {
+		.wrap-reveal {
+			transform: translate(-100%, 0%) translateZ(0);
+		}
+	}
+
+	.bottom-reveal {
+		.wrap-reveal {
+			transform: translate(0%, 100%) translateZ(0);
+		}
+	}
+
+	.loaded .reveal & .left-reveal, .loaded .reveal  & .bottom-reveal, .loaded .reveal & .fade-reveal, .loaded .reveal & .right-reveal {
+		.wrap-reveal {
+			transform: translate(0%, 0%) translateZ(0);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

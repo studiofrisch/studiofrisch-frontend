@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Docker Cheatsheet",
+    "slug": "docker-cheatsheet",
+    "image": "/img/cheatsheets/cheat_sheet_docker.png"
+  },
+  {
+    "title": "Vagrant Cheatsheet",
+    "slug": "vagrant-cheatsheet",
+    "image": "/img/cheatsheets/cheat_sheet_vagrant.png"
+  },
+  {
+    "title": "Puppet Cheatsheet",
+    "slug": "puppet-cheatsheet",
+    "image": "/img/cheatsheets/cheat_sheet_puppet.png"
+  }
+]

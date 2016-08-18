@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Andrey Adamovich",
+    "image": "/img/cheatsheets/cheat_sheet_docker.png",
+    "bio": "A software craftsman with many years of experience in different lifecycle phases of software creation. He is passionate about defining good development practices, documenting and presenting architecture, reuse of code and design patterns, profiling and analysis of application performance as well as extreme automation of development and operations activities."
+  },
+ {
+    "name": "Luciano Fiandesio",
+    "image": "/img/cheatsheets/cheat_sheet_docker.png",
+    "bio": "He loves coding and designing solutions that are both elegant and rock solid. When not busy learning the next big thing, he likes playing with his analogue cameras and cooking Italian food."
+  }
+]

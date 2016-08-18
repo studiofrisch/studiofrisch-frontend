@@ -1,0 +1,133 @@
+// --------------------------------------------
+// some base styles
+
+*, *:before, *:after {
+	-webkit-user-select: text;
+	-webkit-tap-highlight-color: transparent;
+	-moz-box-sizing: border-box; 
+	-webkit-box-sizing: border-box; 
+	box-sizing: border-box;
+
+	text-rendering: optimizeLegibility !important;
+	-webkit-font-smoothing: antialiased !important;
+	-moz-osx-font-smoothing: grayscale !important; 
+}
+html, body {
+	height: 100%;
+	width: 100%;
+}
+body {
+	font-family: $primary-font;
+	font-size: 16px;
+	color: $grey;
+	background: #fff;
+	line-height: 1.6;
+	font-weight: 400;
+	letter-spacing: 1px;
+	overflow-y: scroll;	
+
+	&.preload * {
+		transition: none !important;
+	}
+
+	&.contacts-active, &.lightbox-active {
+		overflow: hidden;	
+
+		#wrapper {
+			overflow-y: scroll;
+		}
+	}
+}
+.container {
+	@include outer-container;
+	padding: 0 10px;
+}
+#wrapper {
+	min-height: 100%;	
+	position: relative;
+}
+#grid {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+
+	.container {
+		height: 100%;
+
+		div {
+			width: 16.666666%;
+			height: 100%;
+			float: left;
+			border-left: 1px solid #f5f5f5;
+
+			&:last-child {
+				border-right: 1px solid #f5f5f5;	
+			}
+		}	
+	}	
+}
+section, header, footer, article, nav {
+	display: block;
+	overflow: hidden;
+	clear: both;
+}
+header {
+	overflow: visible;
+}
+strong {
+	font-weight: 700;
+}
+iframe {
+	background: $base;
+	display: block;
+	overflow: hidden;
+}
+ul.styled {
+	list-style-type: disc; 
+    list-style-position: inside; 
+    margin-left: 30px;
+}
+img {
+	display: block;
+}
+h1, h2, h3, h4, h5, h6 {
+	color: #424242;
+    font-family: $primary-font;
+    font-weight: 700;
+    margin: 0 0 20px;	
+}
+h1 { font-size: 3em; }
+h2 { font-size: 2em; }
+h3 { font-size: 1.4em; }
+h4 { font-size: 1.3em; }
+h5 { font-size: 1.2em; }
+h6 { font-size: 1em; }
+p {
+	margin: 0 0 20px 0;
+	color: $base-text;
+	font-family: $primary-font;
+	font-size: 18px;
+	letter-spacing: 1px;
+}
+hr {
+	margin-bottom: 30px;
+}
+a {
+	color: $primary;
+	outline: none;
+	text-decoration: none !important;
+}
+
+
+// ---------------------- phone meiaq
+@include media($phone) {
+}
+// ---------------------- tablet meiaq
+@include media($tablet) {
+}
+// ---------------------- desktop meiaq
+@include media($desktop) {
+}
