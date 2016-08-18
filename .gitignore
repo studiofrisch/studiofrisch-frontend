@@ -23,6 +23,7 @@ index.php
 .cache
 .project
 .settings
+.publish
 .tmproj
 *.esproj
 *.sublime-project

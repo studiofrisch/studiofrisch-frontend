@@ -139,7 +139,10 @@ gulp.task('build', function () {
 // deploy
 gulp.task('deploy', function () {
 	return gulp.src(base + '/**/*')
-    	.pipe(pages());
+    	.pipe(pages({ 
+	    	remoteUrl: "https://github.com/studiofrisch/studiofrisch.github.io",
+	    	branch: "master"
+	    }));
 }); 
 
 gulp.task('default', ['build', 'watch']);
