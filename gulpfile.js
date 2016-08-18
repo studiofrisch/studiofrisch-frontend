@@ -1,5 +1,6 @@
 // get gulp and modules
 var gulp = require('gulp'),
+	pages = require('gulp-gh-pages'),
 	sync = require('browser-sync'),
 	moment = require('moment'),
 	sass = require('gulp-sass'),
@@ -121,6 +122,7 @@ gulp.task('watch', function () {
 		port: 8080,
 		notify: false
 	});
+
 	gulp.watch(['js/*.js', 'js/**/*.js'], ['js-watch']);
 	gulp.watch(['img/*', 'img/**/*'], ['img-watch']);
 	gulp.watch(['svg/*', 'svg/**/*'], ['svg-watch']);
@@ -131,7 +133,13 @@ gulp.task('watch', function () {
 
 // main work
 gulp.task('build', function () {
-	gulp.start('sass', 'jade', 'uglify', 'imagemin', 'svg', 'copy', 'sitemap');
+	return gulp.start('sass', 'jade', 'uglify', 'imagemin', 'svg', 'copy', 'sitemap');
+});
+
+// deploy
+gulp.task('deploy', function () {
+	return gulp.src(base + '/**/*')
+    	.pipe(pages());
 }); 
 
 gulp.task('default', ['build', 'watch']);
