@@ -138,7 +138,7 @@ gulp.task('build', function () {
 
 // deploy
 gulp.task('deploy', function () {
-	return gulp.src(base + '/**/*')
+	return gulp.src([base + '/**/*', 'CNAME'])
     	.pipe(pages({ 
 	    	remoteUrl: "https://github.com/studiofrisch/studiofrisch.github.io",
 	    	branch: "master"
