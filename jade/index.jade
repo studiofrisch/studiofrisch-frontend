@@ -4,8 +4,6 @@ block head
 	title= "Studio Frisch Design — Brendinga un digitālā dizaina studija"
 
 block content
-	- var current = "Courses"
-
 	include partials/nav
 
 	header#header.reveal
@@ -35,7 +33,7 @@ block content
 				.step.right-reveal
 					.wrap-reveal
 						h3 Vizuālā identitāte
-						span 01
+						span(translate="no") 01
 						p Kopā ar klientiem atklājam zīmola pamatvērtības, lai izveidotu perfekti piemērotus risinājumus. Mēs palīdzam tālredzīgiem zīmoliem definēt dizaina mērķus, kas stiprina attiecības ar klientiem.
 						ul
 							li Zīmola izpēte
@@ -49,7 +47,7 @@ block content
 				.step.right-reveal
 					.wrap-reveal
 						h3 Digitālais dizains
-						span 02
+						span(translate="no") 02
 						p Piedāvājam visus nepieciešamos rīkus, lai uzlabotu kontaktu starp lietotāju un digitālo vidi. Mēs zinām, ka ir nepieciešams pieradināt milzīgo informācijas daudzumu un izveidot inteliģentus, interaktīvus un intuitīvus risinājumus. 
 						ul
 							li Wireframing
@@ -61,7 +59,7 @@ block content
 				.step.right-reveal
 					.wrap-reveal
 						h3 Izstrāde
-						span 03
+						span(translate="no") 03
 						p Mūsu komanda, kurā apvienojušies pieredzējuši jomas speciālisti ar daudzu projektu pieredzi un vairāku programmēšanu valodu zināšanām, ir mūsu studijas mugurkauls, kas nodrošina plašu ideju arsenālu jebkuram izaicinājumam.
 						ul
 							li Front-end
@@ -76,7 +74,7 @@ block content
 		.container
 			.wrap
 				.block-title.block-reveal
-					.bottom-reveal: .tagline.wrap-reveal Prieks kopā strādāt
+					.bottom-reveal: .tagline.wrap-reveal(translate="yes") Prieks kopā strādāt
 					.bottom-reveal: h2.wrap-reveal Klienti
 
 				.clients.block-reveal
@@ -107,10 +105,10 @@ block content
 					ul
 						li.bottom-reveal
 							span.wrap-reveal TEL
-							a(href="tel:+37126005799").wrap-reveal +371 26005799
+							a(href="tel:+37126005799" translate="no").wrap-reveal +371 26005799
 						li.bottom-reveal
 							span.wrap-reveal E PASTS
-							a(href="mailto:makeme@frisch.com").wrap-reveal makeme@frisch.com
+							a(href="mailto:makeme@studiofrisch.com" translate="no").wrap-reveal makeme@studiofrisch.com
 
 			.logo
 				include ../svg/logo.svg

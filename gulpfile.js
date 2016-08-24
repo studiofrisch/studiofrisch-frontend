@@ -15,7 +15,9 @@ var gulp = require('gulp'),
 	htmlhint = require('gulp-htmlhint'),
 	jade = require('gulp-jade'),
 	del = require('del'),
-	sitemap = require('gulp-sitemap');
+	sitemap = require('gulp-sitemap'),
+	l10n = require('gulp-l10n');
+
 
 
 // link public assets
@@ -68,7 +70,31 @@ gulp.task('jade', function () {
 			path.basename = "index";
 		}))
 		.pipe(gulp.dest(base));
+});
 
+// extract locales for translation
+gulp.task('extract-locales', function () {
+  	return gulp.src(base + '/*.html')
+	    .pipe(l10n.extract({
+			native: 'lv',
+			elements: ['title', 'p', 'h1', 'h2', 'h3', 'a', 'span', 'li'],
+		}))
+	    .pipe(gulp.dest('locales'));
+});
+
+// load locales 
+gulp.task('load-locales', ['extract-locales'], function () {
+  	return gulp.src('locales/*.json')
+	    .pipe(l10n.setLocales({
+			native: 'lv',
+			enforce: 'warn'
+		}));
+});
+	
+gulp.task('localize', ['load-locales'], function () {
+	return gulp.src(base + '/*.html')
+		.pipe(l10n())
+		.pipe(gulp.dest(base));
 });
 
 // sitemap
@@ -114,6 +140,7 @@ gulp.task('html-watch', ['jade'], sync.reload);
 gulp.task('js-watch', ['uglify'], sync.reload);
 gulp.task('img-watch', ['imagemin'], sync.reload);
 gulp.task('svg-watch', ['svg'], sync.reload);
+gulp.task('locale-watch', ['localize'], sync.reload);
 
 // watch
 gulp.task('watch', function () {
@@ -123,6 +150,7 @@ gulp.task('watch', function () {
 		notify: false
 	});
 
+	gulp.watch(['locales/*.js'], ['locale-watch']);
 	gulp.watch(['js/*.js', 'js/**/*.js'], ['js-watch']);
 	gulp.watch(['img/*', 'img/**/*'], ['img-watch']);
 	gulp.watch(['svg/*', 'svg/**/*'], ['svg-watch']);
@@ -133,7 +161,7 @@ gulp.task('watch', function () {
 
 // main work
 gulp.task('build', function () {
-	return gulp.start('sass', 'jade', 'uglify', 'imagemin', 'svg', 'copy', 'sitemap');
+	return gulp.start('sass', 'jade', 'uglify', 'imagemin', 'svg', 'copy', 'localize', 'sitemap');
 });
 
 // deploy
@@ -145,4 +173,5 @@ gulp.task('deploy', function () {
 	    }));
 }); 
 
+gulp.task('extract', ['extract-locales']);
 gulp.task('default', ['build', 'watch']);

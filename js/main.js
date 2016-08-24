@@ -15,15 +15,27 @@ $(document).ready(function($) {
 	// build scenes
 	new ScrollMagic.Scene({triggerElement: "#about"})
 		.setClassToggle("#about", "reveal") // add class toggle
+		.on("progress", function (event) {
+			if(event.progress) this.removeClassToggle(false);
+		})
 		.addTo(controller);
 	new ScrollMagic.Scene({triggerElement: "#process"})
 		.setClassToggle("#process", "reveal") // add class toggle
+		.on("progress", function (event) {
+			if(event.progress) this.removeClassToggle(false);
+		})
 		.addTo(controller);
 	new ScrollMagic.Scene({triggerElement: "#clients"})
 		.setClassToggle("#clients", "reveal") // add class toggle
+		.on("progress", function (event) {
+			if(event.progress) this.removeClassToggle(false);
+		})
 		.addTo(controller);
 	new ScrollMagic.Scene({triggerElement: "#contact"})
 		.setClassToggle("#contact", "reveal") // add class toggle
+		.on("progress", function (event) {
+			if(event.progress) this.removeClassToggle(false);
+		})
 		.addTo(controller);
 });
 

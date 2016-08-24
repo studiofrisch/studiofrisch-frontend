@@ -26,12 +26,12 @@ header#header {
 	.image {
 		display: block;
 		width: auto;
-		height: 590px;
-		margin: -20px -660px;	
+		height: 550px;
+		margin: 0 -620px;	
 		
 		background-image: url("/img/bg.jpg");
 		background-repeat: no-repeat;
-		background-position: center 0px;
+		background-position: center 00px;
 		background-size: cover;		
 		overflow: hidden;
 		position: relative;
@@ -60,7 +60,7 @@ header#header {
 
 	.title {
 		position: absolute;
-		top: 80px;
+		top: 60px;
 		left: 0px;
 		width: 100%;
 		padding: 0 20px;
@@ -71,8 +71,8 @@ header#header {
 			font-weight: 300;
 			margin: 0 auto;			
 			text-align: center;
-			font-size: 38px;
-			line-height: 50px;
+			font-size: 34px;
+			line-height: 45px;
 
 			span {
 				width: 100%;
@@ -84,7 +84,17 @@ header#header {
 	// ---------------------- phone meiaq
 	@include media($phone) {
 		.image {
+			height: 590px;
 			margin: -20px -860px;
+		}
+
+		.title {
+			top: 80px;
+
+			h1 {
+				font-size: 38px;
+				line-height: 50px;
+			}
 		}
 	}
 	// ---------------------- tablet meiaq
