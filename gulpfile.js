@@ -77,7 +77,8 @@ gulp.task('extract-locales', function () {
   	return gulp.src(base + '/*.html')
 	    .pipe(l10n.extract({
 			native: 'lv',
-			elements: ['title', 'p', 'h1', 'h2', 'h3', 'a', 'span', 'li'],
+			elements: ['title', 'p', 'h1', 'h2', 'h3', 'a', 'span', 'li', 'meta'],
+			attributes: ['content']
 		}))
 	    .pipe(gulp.dest('locales'));
 });

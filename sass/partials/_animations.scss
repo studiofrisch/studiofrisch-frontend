@@ -4,10 +4,13 @@
 @keyframes fadeinHeader {
     0% {
         opacity: 0;
-        visibility: hidden;
+        transform: translate(0, -20px);
+    }
+    50% {
+        opacity: 1;
     }
     100% {
-        opacity: 1;
-        visibility: visible;
+        opacity: 0;
+        ransform: translate(0, 20px);
     }
 }

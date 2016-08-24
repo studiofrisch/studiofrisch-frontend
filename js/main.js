@@ -46,7 +46,9 @@ if($(window).width() > 560) {
 	});
 }
 
-
+$(window).scroll(function() {
+	$("body").addClass("scrolling");
+});
 
 $(window).load(function() {
 	$("body").removeClass("preload");
