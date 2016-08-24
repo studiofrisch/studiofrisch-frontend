@@ -27,7 +27,7 @@ header#header {
 		margin-left: -4px;
 		display: block;
 		z-index: 100;
-		animation: 1s fadeinHeader infinite;
+		animation: 1s scrollUp infinite;
 		transition: opacity 3s;
 
 		.scrolling & {
@@ -111,6 +111,10 @@ header#header {
 	@include media($tablet) {
 		.image {
 			margin: -20px -660px;
+		}
+
+		.scroll {
+			animation: 1s scrollDown infinite;
 		}
 	}
 	// ---------------------- desktop meiaq

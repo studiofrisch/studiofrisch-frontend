@@ -1,7 +1,7 @@
 // --------------------------------------------
 // animations
 
-@keyframes fadeinHeader {
+@keyframes scrollDown {
     0% {
         opacity: 0;
         transform: translate(0, -20px);
@@ -12,5 +12,19 @@
     100% {
         opacity: 0;
         ransform: translate(0, 20px);
+    }
+}
+
+@keyframes scrollUp {
+    0% {
+        opacity: 0;
+        transform: translate(0, 20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        ransform: translate(0, -20px);
     }
 }
