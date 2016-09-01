@@ -4,13 +4,11 @@
 *, *:before, *:after {
 	-webkit-user-select: text;
 	-webkit-tap-highlight-color: transparent;
-	-moz-box-sizing: border-box; 
-	-webkit-box-sizing: border-box; 
 	box-sizing: border-box;
 
 	text-rendering: optimizeLegibility !important;
-	-webkit-font-smoothing: antialiased !important;
-	-moz-osx-font-smoothing: grayscale !important; 
+	font-smoothing: antialiased !important;
+	font-feature-settings: normal;
 }
 html, body {
 	height: 100%;

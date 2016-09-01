@@ -2,7 +2,7 @@ doctype html
 html
 	head
 		meta(charset="utf-8" translate="no")
-		meta(name="viewport", content="width=device-width, initial-scale=1" translate="no")
+		meta(name="viewport", content="width=device-width, initial-scale=1", translate="no")
 
 		//- base
 		base(href="/")
@@ -58,6 +58,7 @@ html
 		#wrapper
 			block content
 			
+
 		script(type="application/ld+json").
 			{
 				"@context" : "http://schema.org",
@@ -69,19 +70,26 @@ html
 					"https://github.com/studiofrisch"
 				]
 			}
-		script(src="https://use.typekit.net/grq1yue.js")
 		script(src="/js/main.js")
+		script(src="//use.typekit.net/vfb2hic.js")
+    	script.
+    		try{Typekit.load();}catch(e){}
 		script.
-			try{Typekit.load({ async: true });}catch(e){}
-		//- script.
-		//- 	(function(d) {
-		//- 		var config = {
-		//- 			kitId: 'grq1yue',
-		//- 			scriptTimeout: 3000,
-		//- 			async: true
-		//- 		},
-		//- 		h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
-		//- 	})(document);			
+			window.fbAsyncInit = function() {
+				FB.init({
+					appId: '534205980120566',
+					xfbml: true,
+					version: 'v2.7'
+				});
+			};
+
+			(function(d, s, id) {
+				var js, fjs = d.getElementsByTagName(s)[0];
+				if (d.getElementById(id)) {return;}
+				js = d.createElement(s); js.id = id;
+				js.src = "//connect.facebook.net/en_US/sdk.js";
+				fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
 		script.
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

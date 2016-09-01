@@ -3,6 +3,18 @@
 section#about {
 	padding: 60px 0;
 
+	.messenger {
+		z-index: 100;		
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+
+		svg {
+			width: 44px;
+    		height: 44px;
+		}
+	}
+
 	.block-title {
 		float: left;
 		text-align: left;
@@ -27,12 +39,21 @@ section#about {
 	}
 	// ---------------------- tablet meiaq
 	@include media($tablet) {
+		.block-title {
+			max-width: 50%;
+			padding-right: 40px;
+		}
 		.description {
 			margin: 0 0 0 50%;
 			padding-top: 42px;
 			width: 50%;
 			clear: none;
 			color: $base-header;
+		}
+
+		.messenger {
+			bottom: 50px;
+			right: 50px;
 		}
 	}
 	// ---------------------- desktop meiaq

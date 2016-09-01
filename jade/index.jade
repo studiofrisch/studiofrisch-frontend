@@ -8,7 +8,8 @@ block content
 
 	header#header.reveal
 		.container
-			.scroll
+			a(href="#about" translate="no").scroll
+				.ball
 
 			.wrap
 				.image
@@ -19,6 +20,9 @@ block content
 				.bottom-reveal: h1.wrap-reveal dizaina studija
 
 	section#about
+		a(href="http://m.me/studiofrisch" target="_blank" translate="no").messenger
+			include ../svg/messenger.svg
+
 		.container
 			.block-title.block-reveal
 				.bottom-reveal: .tagline.wrap-reveal Made in Latvia

@@ -4,6 +4,14 @@
 // reveal.reveal('.bar');
 
 $(document).ready(function($) {
+
+	$(".scroll").click(function() {
+	    $('body').animate({
+	        scrollTop: $("#about").offset().top
+	    }, 2000);
+
+	    return false;
+	});
 	
 	// init controller
 	var controller = new ScrollMagic.Controller({
