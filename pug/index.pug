@@ -1,0 +1,128 @@
+extends layouts/base
+
+block head
+	title= "Studio Frisch Design — Brendinga un digitālā dizaina studija"
+
+block content
+	header#header
+		.slider
+			ul
+				li.active
+				li
+				li
+				li
+				li
+				li
+
+		.social-links
+			ul
+				li: a(href="https://www.instagram.com/studiofrisch/" translate="no").wrap-reveal Instagram
+				li: a(href="https://www.facebook.com/studiofrisch/" translate="no").wrap-reveal Facebook
+		.contact
+			ul
+				li: a(href="tel:+37126005799" translate="no") +371 26005799
+				li: a(href="mailto:makeme@studiofrisch.com" translate="no") makeme@studiofrisch.com
+		.logo
+			a(href="/")
+				include ../svg/logo.svg
+		.logo-title
+			a(href="/") Frisch
+		.down
+			include ../svg/arrow.svg
+
+	section#about
+		.container
+			.block-title.block-reveal
+				.bottom-reveal: h1.wrap-reveal Design with empathy
+
+			.description.block-reveal
+				.left-reveal
+					.wrap-reveal
+						p We strongly believe in our work – designing and breathing life into outstanding design solutions – making sure to take pride in doing it properly and for the right reasons.
+
+	section#process
+		.container
+			.block-reveal
+				.step.right-reveal
+					.wrap-reveal
+						h3 Brand identity
+						span(translate="no") 01
+						p Together with clients, we discover the core values of the brand to create perfectly suited solutions. We help forward-thinking brands define design goals that enhance customer relationships.
+						ul
+							li Brand research
+							li Logo
+							li Visual identity
+							li Packaging design
+							li Signage design
+							li Brand communication
+							li Copywrite
+
+				.step.right-reveal
+					.wrap-reveal
+						h3 Digital design
+						span(translate="no") 02
+						p We provide all the necessary tools to improve the interaction between the user and application, to help you tame the vast ocean of online information and ultimately lay the most intelligent, interactive and intuitive final products at your fingertips. 
+						ul
+							li Wireframing
+							li Web design
+							li Digital product design
+							li UX
+							li Social network design
+
+				.step.right-reveal
+					.wrap-reveal
+						h3 Development
+						span(translate="no") 03
+						p Our team of experienced industry professionals with numerous projects under their belt and knowledge of several programming languages are the backbone of our agency, providing an extensive arsenal of ideas for any challenges along the way.
+						ul
+							li Front-end
+							li Back-end
+							li Mobile applications
+							li E-commerce
+							li Testing
+							li Maintenance
+
+	section#clients
+		.container
+			.wrap
+				.block-title.block-reveal
+					.bottom-reveal: .tagline.wrap-reveal(translate="yes") Happy to work together
+					.bottom-reveal: h2.wrap-reveal Clients
+
+				.clients.block-reveal
+					.client.fade-reveal
+						.wrap-reveal: include ../svg/clients/lattelecom.svg
+					.client.fade-reveal
+						.wrap-reveal: include ../svg/clients/rimi.svg
+					.client.fade-reveal
+						.wrap-reveal: include ../svg/clients/dove.svg
+					.client.fade-reveal
+						.wrap-reveal: include ../svg/clients/riga-black-balsam.svg
+					.client.fade-reveal
+						.wrap-reveal: include ../svg/clients/unilever.svg
+					.client.fade-reveal
+						.wrap-reveal: include ../svg/clients/nordea.svg
+					.client.fade-reveal
+						.wrap-reveal: include ../svg/clients/balta.svg
+					.client.fade-reveal
+						.wrap-reveal: include ../svg/clients/mobilly.svg
+
+	section#contact
+		.container
+			.float
+				.block-title.block-reveal
+					.bottom-reveal: h2.wrap-reveal Contact
+
+				.block-title.block-reveal
+					ul
+						li.bottom-reveal
+							span.wrap-reveal TEL
+							a(href="tel:+37126005799" translate="no").wrap-reveal +371 26005799
+						li.bottom-reveal
+							span.wrap-reveal E MAIL
+							a(href="mailto:makeme@studiofrisch.com" translate="no").wrap-reveal makeme@studiofrisch.com
+						li.bottom-reveal
+							span.wrap-reveal: a(href="https://www.instagram.com/studiofrisch/" translate="no").link Instagram
+							a(href="https://www.facebook.com/studiofrisch/" translate="no").link.wrap-reveal Facebook
+
+	include partials/footer

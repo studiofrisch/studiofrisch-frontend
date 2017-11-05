@@ -12,6 +12,16 @@ $(document).ready(function($) {
 
 	    return false;
 	});
+
+	var slides = $("#header .slider li"),
+		currentSlide = 0;
+
+	setInterval(function () {
+		slides.removeClass("active");
+		slides.eq(currentSlide).addClass("active");
+
+		currentSlide = (currentSlide + 1) % 5;
+	}, 2000);
 	
 	// init controller
 	var controller = new ScrollMagic.Controller({

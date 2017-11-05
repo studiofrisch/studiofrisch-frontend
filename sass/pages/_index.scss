@@ -1,7 +1,7 @@
 // --------------------------------------------
 // about
 section#about {
-	padding: 60px 0;
+	padding: 165px 0 80px 0;
 
 	.messenger {
 		z-index: 100;		
@@ -12,12 +12,23 @@ section#about {
 		svg {
 			width: 44px;
     		height: 44px;
+    		fill: #000000;
+
+			fill: #000000;
+
+			path {
+				fill: #000000;	
+			}
 		}
 	}
 
 	.block-title {
 		float: left;
 		text-align: left;
+
+		h1 {
+			font-size: 32px;
+		}
 	}
 
 	.description {
@@ -26,8 +37,8 @@ section#about {
 
 		p {
 			color: $base-header;
-			font-size: 18px;
-			font-weight: 300;
+			font-size: 16px;
+			font-weight: 400;
 			margin-bottom: 0;	
 			line-height: 1.54;	
 		}
@@ -45,7 +56,7 @@ section#about {
 		}
 		.description {
 			margin: 0 0 0 50%;
-			padding-top: 42px;
+			padding-top: 8px;
 			width: 50%;
 			clear: none;
 			color: $base-header;
@@ -58,7 +69,6 @@ section#about {
 	}
 	// ---------------------- desktop meiaq
 	@include media($desktop) {
-		padding: 75px 0 110px;
 	}
 }
 
@@ -66,7 +76,7 @@ section#about {
 // --------------------------------------------
 // process
 section#process {
-	padding: 60px 0;
+	padding: 80px 0 30px 0;
 
 	.step {	
 		width: 100%;
@@ -77,16 +87,14 @@ section#process {
 		}
 
 		h3 {
-			margin-bottom: 24px;
-			font-size: 18px;
+			margin-bottom: 50px;
+			font-size: 21px;
 			font-weight: 400;
-			font-family: $secondary-font;
-			//- color: #dc9090;
+			font-family: $primary-font;
 		}
 
 		span {
-			color: $secondary;
-			margin: 0 0 24px 0;
+			margin: 0 0 46px 0;
 			display: block;
 			float: left;
 			width: 100%;
@@ -96,12 +104,14 @@ section#process {
 		}
 
 		p {
-			font-weight: 300;
+			font-weight: 400;
 			color: $base-header;
-			margin-bottom: 24px;
+			margin-bottom: 50px;
 			line-height: 28px;
 			float: left;
-			width: 100%;			
+			font-size: 16px;
+			width: 100%;
+			line-height: 1.5;
 		}
 
 		ul {
@@ -109,8 +119,8 @@ section#process {
 
 			li {
 				line-height: 36px;
-				font-size: 18px;
-				font-weight: 300;
+				font-size: 16px;
+				font-weight: 400;
 				color: $base-header;
 			}
 		}
@@ -124,8 +134,12 @@ section#process {
 	@include media($tablet) {
 		.step {
 			width: 33.333333%;
-			padding-right: 80px;
+			padding-right: 65px;
 			float: left;
+
+			&:nth-child(3) {
+				padding-right: 25px;
+			}
 
 			h3 {
 				margin-bottom: 40px;
@@ -138,8 +152,6 @@ section#process {
 	}
 	// ---------------------- desktop meiaq
 	@include media($desktop) {
-		padding: 110px 0 80px 0;
-
 		.step {
 			p {
 				min-height: 224px;
@@ -156,7 +168,7 @@ section#clients {
 	padding: 60px 0;
 
 	.wrap {
-		background: #e8ebed;
+		background: #ededed;
 		width: auto;
 		margin: 0 -10px;
 		padding: 80px 10px 60px 10px;
@@ -165,11 +177,17 @@ section#clients {
 
 	.block-title {
 		float: left;
-		max-width: 160px;
+		max-width: 260px;
 		width: 100%;
 
+		.tagline {
+			color: #000000;
+			margin-bottom: 16px;
+		}
+
 		h2 {
-			color: #fff;
+			color: #000000;
+			line-height: 1;
 		}
 	}
 
@@ -196,6 +214,14 @@ section#clients {
 				max-width: 120px;
 				vertical-align: middle;
 				display: block;
+			}
+
+			svg {
+				fill: #8c8c8c !important;
+
+				path, rect, polygon, g {
+					fill: #8c8c8c !important;
+				}
 			}
 
 			&:nth-child(1), &:nth-child(6) { // lattelecom and nordea
@@ -279,14 +305,14 @@ section#clients {
 // --------------------------------------------
 // contact
 section#contact {
-	padding: 70px 0 116px 0;
+	padding: 80px 0 45px 0;
 
 	.container {
 		position: relative;
 	}
 
 	.block-title {
-		margin-bottom: 104px;
+		margin-bottom: 74px;
 	}
 	.logo {
 		width: 100%;
@@ -303,7 +329,7 @@ section#contact {
 
 	p {
 		margin: 0 0 30px 0;
-		font-weight: 300;
+		font-weight: 400;
 	}
 
 	ul {
@@ -311,8 +337,8 @@ section#contact {
 		float: left;
 
 		li {
-			margin: 0 0 60px 0;
-			font-weight: 300;
+			margin: 0 0 50px 0;
+			font-weight: 400;
 			font-size: 18px;
 			width: 100%;
 			float: left;
@@ -320,15 +346,22 @@ section#contact {
 
 			span {
 				float: left;
-				font-size: 11px;
-				color: $secondary;
+				font-size: 13px;
 				font-weight: 700;
 				min-width: 33.333333%;
 				width: 100%;
+				letter-spacing: 2.2px;
+			}
+
+			.link {
+				font-size: 16px;
+				letter-spacing: 0.7px;
+				font-weight: 400;
+				text-decoration: underline !important;
 			}
 
 			a {
-				color: $base-header;
+				color: $base-header;				
 			}
 		}
 	}
@@ -364,5 +397,25 @@ section#contact {
 			width: 50%;
 			margin-left: 50%;
 		}
+	}
+}
+
+
+// --------------------------------------------
+// footer
+footer#footer {
+	height: 220px;
+	background: #fff;
+	position: relative;
+
+	.logo {
+		width: 80px;
+		display: block;
+		float: left;
+		clear: both;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
 	}
 }

@@ -13,7 +13,7 @@ var gulp = require('gulp'),
 	plumber = require('gulp-plumber'),
 	concat = require('gulp-concat'),
 	htmlhint = require('gulp-htmlhint'),
-	jade = require('gulp-jade'),
+	pug = require('gulp-pug'),
 	del = require('del'),
 	sitemap = require('gulp-sitemap'),
 	l10n = require('gulp-l10n');
@@ -57,11 +57,11 @@ gulp.task('sass', function () {
 		.pipe(sync.stream());
 });
 
-// compiles jade
-gulp.task('jade', function () {
-	return gulp.src('./jade/*.jade')
+// compiles pug
+gulp.task('pug', function () {
+	return gulp.src('./pug/*.pug')
 		.pipe(plumber())
-		.pipe(jade({
+		.pipe(pug({
 			pretty: true
 		}))
 		.pipe(rename(function(path) {
@@ -137,7 +137,7 @@ gulp.task('copy', function () {
 });
 
 // watch tasks (to relaod browser after finish)
-gulp.task('html-watch', ['jade'], sync.reload);
+gulp.task('html-watch', ['pug'], sync.reload);
 gulp.task('js-watch', ['uglify'], sync.reload);
 gulp.task('img-watch', ['imagemin'], sync.reload);
 gulp.task('svg-watch', ['svg'], sync.reload);
@@ -156,13 +156,13 @@ gulp.task('watch', function () {
 	gulp.watch(['img/*', 'img/**/*'], ['img-watch']);
 	gulp.watch(['svg/*', 'svg/**/*'], ['svg-watch']);
 	gulp.watch(['sass/*.scss', 'sass/**/*.scss'], ['sass']);
-	gulp.watch(['jade/*.jade', 'jade/**/*.jade'], ['html-watch', 'sitemap']);
+	gulp.watch(['pug/*.pug', 'pug/**/*.pug'], ['html-watch', 'sitemap']);
 	gulp.watch(['favicon.ico', 'humans.txt', 'robots.txt'], ['copy']);
 });
 
 // main work
 gulp.task('build', function () {
-	return gulp.start('sass', 'jade', 'uglify', 'imagemin', 'svg', 'copy', 'localize', 'sitemap');
+	return gulp.start('sass', 'pug', 'uglify', 'imagemin', 'svg', 'copy', 'localize', 'sitemap');
 });
 
 // deploy

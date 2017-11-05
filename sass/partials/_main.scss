@@ -11,64 +11,111 @@ nav#nav {
 // header
 header#header {
 	padding: 0 0 75px 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
 
 	.container {
 		position: relative;
 	}
 
-	.scroll {
-		position: fixed;
-		bottom: 40px;
+	.down {
+		position: absolute;
 		left: 50%;
-		display: block;
-		width: 45px;
-		height: 45px;
+		bottom: 45px;
+		transform: translate(-50%, 0);
 		z-index: 100;
-		padding: 18px 18px;
-		margin-left: -7px;
-
-		.ball {
-			width: 9px;
-			height: 9px;
-			border-radius: 4px;
-			background: #fff;			
-			
-			display: block;
-			position: relative;			
-			animation: 1s scrollUp infinite;
-			transition: opacity 3s;
-		}
-		
-		.scrolling & {
-			display: none;
-		}
-	}
-
-	.wrap {
-		margin: 0;
-		width: auto;
-		overflow: hidden;
-		background-color: #f3f3f3;
-	}
-
-	.image {
 		display: block;
-		width: auto;
-		height: 550px;
-		margin: 0 -620px;	
-		
-		background-image: url("/img/bg.jpg");
-		background-repeat: no-repeat;
-		background-position: center 00px;
-		background-size: cover;		
-		overflow: hidden;
-		position: relative;
-		opacity: 0;
-		transition: opacity 1s;
+		transition: opacity 3s;
+		animation: 1s scrollDown infinite;
 
-		.loaded & {
-			opacity: 1;
+		svg {
+			fill: #fff;
 		}
+	}
+
+	.slider {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 100%;
+
+		li {
+			float: left;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0px;
+			left: 0px;			 
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-size: cover;
+			opacity: 0;
+			visibility: hidden;
+			transition: 
+				opacity 0.4s ease,
+				visibility 0.4s ease;
+
+			&:nth-child(0) {background-image: url("/img/work/corebook-macbook.jpg");}
+			&:nth-child(1) {background-image: url("/img/work/corebook.jpg");}
+			&:nth-child(2) {background-image: url("/img/work/envestio.jpg");}
+			&:nth-child(3) {background-image: url("/img/work/kms.jpg");}
+			&:nth-child(4) {background-image: url("/img/work/mobilly.jpg");}
+			&:nth-child(5) {background-image: url("/img/work/nest.jpg");}
+
+			&.active {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+
+	.logo-title {
+		position: absolute;
+		left: 55px;
+		bottom: 45px;
+		float: left;
+
+		a {
+			color: #fff;
+		}
+	}
+
+	.contact {
+		position: absolute;
+		right: 55px;
+		bottom: 45px;
+
+		li {
+			float: left;
+			
+			a {
+				margin-left: 50px;
+				color: #fff;
+			}
+		}		
+	}
+
+	.social-links {
+		position: absolute;
+		right: 55px;
+		top: 65px;
+
+		li {
+			float: left;
+			
+			a {
+				margin-left: 50px;
+				color: #fff;
+			}
+		}		
+	}
+
+	.logo {
+		position: absolute;
+		top: 60px;
+		left: 55px;
 	}
 
 	.title {
@@ -81,7 +128,7 @@ header#header {
 		h1 {
 			color: #fff;
 			width: 100%;
-			font-weight: 300;
+			font-weight: 400;
 			margin: 0 auto;			
 			text-align: center;
 			font-size: 34px;
@@ -91,50 +138,6 @@ header#header {
 				width: 100%;
 				// transition-delay: 0.5s;
 			}
-		}
-	}
-
-	@media screen and (min-height: 620px) {
-		.scroll {
-			position: absolute;
-		}
-	}
-
-	// ---------------------- phone meiaq
-	@include media($phone) {
-		.image {
-			height: 590px;
-			margin: -20px -860px;
-		}
-
-		.title {
-			top: 80px;
-
-			h1 {
-				font-size: 38px;
-				line-height: 50px;
-			}
-		}
-	}
-	// ---------------------- tablet meiaq
-	@include media($tablet) {
-		.image {
-			margin: -20px -660px;
-		}
-
-		.scroll {
-			.ball {
-				animation: 1s scrollDown infinite;
-			}
-		}
-	}
-	// ---------------------- desktop meiaq
-	@include media($desktop) {
-		.image {
-			margin: -20px -420px;
-		}
-		.wrap {
-			margin: 0 -80px;
 		}
 	}
 } 
@@ -148,78 +151,4 @@ header#header {
 	height: auto;
 	margin: 20px auto;
 	display: block;
-}
-
-
-// --------------------------------------------
-// footer
-footer#footer {
-	background: #111111;
-	color: #565656;
-	padding: 80px 0;
-	width: 100%;
-
-	p {
-		font-size: 14px;
-		color: #565656;
-	}
-
-	a {
-		color: #c9c9c9;
-	}
-
-	.credit {
-		float: left;
-		width: 100%;
-
-		p {
-			margin: 0 0 2px 0;
-			text-align: center;
-		}
-
-		a {
-			clear: both;
-			float: left;
-			width: 100%;
-			text-align: center;
-			font-size: 14px;
-			margin: 0 0 20px 0;
-		}
-
-		.devchampions {
-			margin: 0 0 40px 0;
-			display: block;
-			float: right;
-
-			img {
-				width: 100%;
-				max-width: 134px;
-				margin: 0 auto;
-				opacity: 0.7;
-			}
-		}
-	}
-
-	.social {
-		float: left;
-	}
-
-	.copy {
-		float: left;
-
-		#share-this-mobile {
-			padding: 0;
-		}
-	}
-
-
-	// ---------------------- phone meiaq
-	@include media($phone) {
-	}
-	// ---------------------- tablet meiaq
-	@include media($tablet) {
-	}
-	// ---------------------- desktop meiaq
-	@include media($desktop) {
-	}
 }
