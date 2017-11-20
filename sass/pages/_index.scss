@@ -87,14 +87,14 @@ section#process {
 		}
 
 		h3 {
-			margin-bottom: 50px;
+			margin-bottom: 15px;
 			font-size: 21px;
 			font-weight: 400;
 			font-family: $primary-font;
 		}
 
 		span {
-			margin: 0 0 46px 0;
+			margin: 0 0 25px 0;
 			display: block;
 			float: left;
 			width: 100%;
@@ -106,7 +106,7 @@ section#process {
 		p {
 			font-weight: 400;
 			color: $base-header;
-			margin-bottom: 50px;
+			margin-bottom: 25px;
 			line-height: 28px;
 			float: left;
 			font-size: 16px;
@@ -201,6 +201,8 @@ section#clients {
 			padding:  30px 20px;		
 			height: 140px;	
 			margin-bottom: 40px;
+			display: flex;
+			justify-content: center;
 
 			&:nth-child(2n) {
 				@include omega();
@@ -251,13 +253,16 @@ section#clients {
 		.clients {		
 			.client {
 				@include span-columns(1 of 3);
+				display: flex;
 
 				&:nth-child(2n) {
 					@include span-columns(1 of 3);
+					display: flex;
 				}	
 
 				&:nth-child(3n) {
 					@include omega();
+					display: flex;
 				}		
 			}	
 		}
@@ -284,17 +289,21 @@ section#clients {
 
 			.client {
 				@include span-columns(1 of 4);
+				display: flex;
 
 				&:nth-child(2n) {
 					@include span-columns(1 of 4);
+					display: flex;
 				}
 
 				&:nth-child(3n) {
 					@include span-columns(1 of 4);
+					display: flex;
 				}	
 
 				&:nth-child(4n) {
 					@include omega();
+					display: flex;
 				}		
 			}	
 		}

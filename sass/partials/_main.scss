@@ -22,7 +22,7 @@ header#header {
 	.down {
 		position: absolute;
 		left: 50%;
-		bottom: 45px;
+		bottom: 85px;
 		transform: translate(-50%, 0);
 		z-index: 100;
 		display: block;
@@ -73,8 +73,8 @@ header#header {
 
 	.logo-title {
 		position: absolute;
-		left: 55px;
-		bottom: 45px;
+		left: 12px;
+		bottom: 24px;
 		float: left;
 
 		a {
@@ -84,14 +84,15 @@ header#header {
 
 	.contact {
 		position: absolute;
-		right: 55px;
-		bottom: 45px;
+		right: 12px;
+		bottom: 24px;
 
 		li {
-			float: left;
+			float: none;
 			
 			a {
 				margin-left: 50px;
+				float: right;
 				color: #fff;
 			}
 		}		
@@ -99,12 +100,12 @@ header#header {
 
 	.social-links {
 		position: absolute;
-		right: 55px;
-		top: 65px;
+		right: 12px;
+		top: 24px;
 
 		li {
-			float: left;
-			
+			float: none;	
+
 			a {
 				margin-left: 50px;
 				color: #fff;
@@ -114,8 +115,13 @@ header#header {
 
 	.logo {
 		position: absolute;
-		top: 60px;
-		left: 55px;
+		top: 24px;
+		left: 20px;
+
+		svg {
+			width: 40px;
+			height: 40px;
+		}
 	}
 
 	.title {
@@ -138,6 +144,46 @@ header#header {
 				width: 100%;
 				// transition-delay: 0.5s;
 			}
+		}
+	}
+
+	// ---------------------- tablet meiaq
+	@include media($tablet) {
+		.logo {
+			left: 55px;
+			top: 60px;
+
+			svg {
+				width: auto;
+				height: auto;
+			}
+		}
+
+		.social-links {
+			right: 55px;
+			top: 65px;
+
+			li {
+				float: left;
+			}
+		}
+
+		.contact {
+			right: 55px;
+			bottom: 45px;
+
+			li {
+				float: left;
+			}		
+		}
+
+		.logo-title {
+			left: 55px;
+			bottom: 45px;
+		}
+
+		.down {
+			bottom: 45px;
 		}
 	}
 } 
